@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "497211582595",
+    "firebase_url": "https://elearn-aryo.firebaseio.com",
+    "project_id": "elearn-aryo",
+    "storage_bucket": "elearn-aryo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497211582595:android:fea3c508a767113be093b6",
+        "android_client_info": {
+          "package_name": "com.elearn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497211582595-jvu0pfjdlacoqitu14gohsnboehj41k8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjPIX9_9T1KkNxNTBwNf_wn58QhgusDeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497211582595-jvu0pfjdlacoqitu14gohsnboehj41k8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

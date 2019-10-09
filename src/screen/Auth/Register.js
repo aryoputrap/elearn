@@ -57,7 +57,7 @@ class Welcome extends Component {
 
                                 </View>
                                 <Text style={styles.HeaderLogin}>
-                                    LOGIN
+                                    REGISTER
                                 </Text>
                                 <View style={styles.ViewTextInput}>
                                     <Icon2
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
         left:1,
         right:11
     },
-    btnContainer: {
+    btnContainer: { 
         backgroundColor: "white",
         borderRadius: 100,
         marginTop: 8,

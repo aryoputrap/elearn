@@ -21,7 +21,7 @@ import Materi from '../Menu/Menu'
 export default class Home extends Component {
     render() {
         return (
-            <View style={{backgroundColor:'#FFC34D', flex:1}}>
+            <View style={{backgroundColor:'#FFC90E', flex:1}}>
                 <StatusBar translucent backgroundColor="transparent" />
                 <View
                     style={{

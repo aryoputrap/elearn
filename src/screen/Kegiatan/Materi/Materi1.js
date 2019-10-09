@@ -6,14 +6,10 @@ import { WebView } from 'react-native-webview'
 export default class Demo extends Component {
     render() {
         return (
-    <View style = {{ flex: 1, backgroundColor:'black', marginBottom:10, marginTop:10}
-          }>
-            <Text style={{color:'black'}}> Satu</Text>
             <WebView
-                style={{ flex: 2 }}
+                style={{ flex: 1 }}
                 source={{uri:"http://physics.bu.edu/~duffy/HTML5/impulse.html"}}
             />
-        </View >
         );
     }
 }

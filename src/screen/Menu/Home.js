@@ -17,9 +17,6 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import { Container, Header, Tab, Tabs, TabHeading, ScrollableTab } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient';
 
-//import screen
-import Materi from '../Menu/Menu'
-import Materi1 from '../Materi/Materi1'
 
 export default class Home extends Component {
     render() {
@@ -27,7 +24,7 @@ export default class Home extends Component {
             <View style={styles.parent}>
                 <StatusBar translucent backgroundColor="transparent" />
                 <View style={styles.Shape1}>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20, marginTop: 35 }} >
+                    <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 20, marginTop: 50 }} >
                         <Icon name="user-circle-o" size={45} color="white" />
                         <View style={{ flexDirection: "column" }}>
                             <Text style={styles.TextWellcome}>Aryo Putra Purwanto</Text>
@@ -42,8 +39,13 @@ export default class Home extends Component {
                         source={require('../../asset/menu.png')}
                          />
                     </View>
-                   
+                    <View>
+                        <Image
+                            style={{height:"60%", width:'100%',marginTop:430, bottom:0,top:0}}
+                            source={require('../../asset/awan1.png')} />
+                    </View>
                 </View>
+          
                 <View style={styles.PilihMenu}>
                     <Text style={styles.TeksPilihMenu}>Pilih Menu</Text>
                 </View>
@@ -62,7 +64,9 @@ export default class Home extends Component {
                                 source={require('../../asset/i.png')} />
                             <Text style={styles.TeksMenu}>Indikator</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.TouchMenu}>
+                        <TouchableOpacity 
+                        onPress={() => this.props.navigation.navigate('Bantuan')}
+                        style={styles.TouchMenu}>
                             <Image
                                 resizeMode='contain'
                                 style={styles.MenuImage}
@@ -89,21 +93,13 @@ export default class Home extends Component {
                                 style={styles.MenuImage}
                                 source={require('../../asset/Games.gif')} />
                             <Text style={styles.TeksMenu}>Games</Text>
-                        </TouchableOpacity>
+                        </TouchableOpacity>   
                     </View>
-                    <Image
-                    resizeMode='cover'
-                    style={{height:"100%", width:'100%'}}
-                    source={require('../../asset/awan2.png')} />
-
-                {/* <Materi1 />    */}
-    
             </View>
 
         )
     }
 }
-
 
 const styles = StyleSheet.create({
     container: {

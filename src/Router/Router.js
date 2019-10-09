@@ -5,13 +5,27 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import Icon from "react-native-vector-icons/FontAwesome";
 
+
+//Authen
 import Login from '../screen/Auth/Login'
-import Home from '../screen/Index/Home'
-import Profil from '../screen/Profil/Profil'
+import Registrasi from '../screen/Auth/Register'
+import Auth from '../screen/Auth/Auth'
+import Home from '../screen/Menu/Home'
+
+// import Profil from '../screen/Profil/Profil'
 import Kegiatan from '../screen/Kegiatan/Kegiatan'
-import Materi from '../screen/Menu/Menu'
+import Materi from '../screen/Kegiatan/Materi/Materi1'
+import Chat from '../screen/Chat/Chat'
 import SplashScreen from '../screen/SplashScreen/SplashScreen'
-import Game from '../screen/Menu/Game'
+//Menu
+import Game from '../screen/Menu/Games/Game'
+
+//KEGIATAN
+import Pretest from '../screen/Kegiatan/PreTest/Pretest'
+
+//MENU BANTUAN
+import Bantuan from '../screen/Menu/Bantuan/Bantuan'
+import { auth } from 'react-native-firebase';
 
 
 
@@ -39,8 +53,8 @@ const StackPublic = createBottomTabNavigator(
         title: "Kegiatan"
       }
     },
-    Login: {
-      screen: Login,
+    Chat: {
+      screen: Chat,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
         <View style={styles.roudedBottom}>          
@@ -50,8 +64,8 @@ const StackPublic = createBottomTabNavigator(
         title: "Diskusi"
       }
     },
-    Profil: {
-      screen: Profil,
+    Auth: {
+      screen: Auth,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <View style={styles.roudedBottom}>
@@ -62,12 +76,12 @@ const StackPublic = createBottomTabNavigator(
     },
 
   }, {
-  initialRouteName: "Home",
+  initialRouteName: "Auth",
   headerMode: 'none',
-  tabBarOptions: {
-    activeTintColor: "#FFC34D",
+  tabBarOptions: { 
+    activeTintColor: "#FFC90E",
     inactiveTintColor: 'white',
-    style: { backgroundColor: '#201310' }
+    style: { backgroundColor: '#042B3E' }
   },
 }
 )
@@ -76,7 +90,11 @@ const PublicStack = createStackNavigator(
   {
     StackPublic:StackPublic,
     Game:Game,
-    Materi:Materi
+    Materi:Materi,
+    Bantuan:Bantuan,
+    Pretest:Pretest,
+    Login:Login,
+    Registrasi:Registrasi
   },{
     headerMode:'none'
   }
@@ -100,7 +118,7 @@ const styles = StyleSheet.create({
     width:70,
     height:90,
     borderRadius:100,
-    backgroundColor: '#201310',
+    backgroundColor: '#042B3E',
     alignItems: 'center',
     marginTop: 20 
   },

@@ -13,7 +13,7 @@ class SplashScreen extends React.Component {
     _splash = () => {
       this.props.navigation.navigate('Router')
     }
-  
+    //lakukan setelah render 
     componentDidMount() {
       setTimeout(this._splash, 2500)
     }
